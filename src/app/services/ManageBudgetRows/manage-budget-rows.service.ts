@@ -28,6 +28,7 @@ export class ManageBudgetRowsService {
   
   private rowsSubject: Subject<BudgetRow[]> = new Subject<BudgetRow[]>();
   private rows: BudgetRow[] = [];
+  private newItemIndex: number = 0;
   
   getRows(): Subject<BudgetRow[]> {
     return this.rowsSubject;
@@ -36,11 +37,17 @@ export class ManageBudgetRowsService {
   setInitial(rows: BudgetRow[]) {
     this.rows = rows;
     this.rowsSubject.next(rows);
+    this.newItemIndex = this.rows.length;
+  }
+
+  getNewIndex(){
+    return this.newItemIndex;
   }
 
   addItem(row: BudgetRow) {
     this.rows.push(row);
     this.rowsSubject.next(this.rows);
+    this.newItemIndex++;
   }
 
   removeItem(rowId: number) {

@@ -32,7 +32,8 @@ export class BudgetItemComponent implements OnInit {
   }
 
   addItem(): void {
-    var newItem = new BudgetRow(this.budgetRows.length + 1, "whatever");
+    let index = this.manageBudgetRowsService.getNewIndex();
+    var newItem = new BudgetRow(index, "Label");
     this.manageBudgetRowsService.addItem(newItem);
   }
 
