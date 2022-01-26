@@ -1,0 +1,14 @@
+<div class="row app">
+  <div class="col-md-4 app-header">
+    <app-header></app-header>
+    <p>bleh bleh bleh bleh bleh</p>
+  </div>
+  <div class="col-md-8 app-body">
+    <!--<app-budgetItem [id]="0" [title]="'Income'" [rows]="incomeRows.rows"></app-budgetItem>-->
+    <ul id="budgetItem-list">
+      <li *ngFor="let budgetItem of budgetItems">
+          <app-budgetItem [id]="budgetItem.id" [title]="budgetItem.title" [budgetRows]="budgetItem.budgetRows"></app-budgetItem>
+      </li>
+    </ul>
+  </div>
+</div>

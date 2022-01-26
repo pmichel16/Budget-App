@@ -1,0 +1,25 @@
+<div class="rounded container budgetItem-body">
+  <div >
+    <div class="budgetItem-header">
+      <button id="arrowBtn" 
+        type="button" 
+        class="btn btn-default budgetItem-header-button" 
+        data-toggle="collapse" 
+        [attr.data-target]="'#text_'+id" 
+        (click)="changeText()">
+        <span class="budgetItem-button-text align-top"><b>{{title}}</b></span>
+        <mat-icon>{{btnText}}</mat-icon>
+      </button>
+      <div class="budgetItem-header-text">Planned</div>
+      <div class="budgetItem-header-text">Remaining</div>
+    </div>
+    <div [attr.id]="'text_'+id"class="collapse show budgetItem-list-container">
+      <ul>
+        <li *ngFor="let row of budgetRows">
+          <app-budgetItemRow [title]="row.label" [manageBudgetRowsService]="manageBudgetRowsService"></app-budgetItemRow>
+        </li> 
+      </ul>
+      <button id=add-item-btn (click) = "addItem()">Add item</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+/*
+ * Row layout
+ */
+
+.budgetItem-list-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: -40px;
+  }
+  
+  .budgetItem-list-form-group {
+    margin: 0.6em 0;
+    flex-basis: 50%;
+    margin-right: 40px;
+  }
+  
+  .budgetItem-list-underline {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #0074ae;
+  }
+  
+  /*
+   * Row interior
+   */
+
+  .budgetItem-list-textbox {
+    line-height: $table-line-height;
+    border:none;
+    height: 1.8em;
+    font-size: large;
+  }
+  
+  .budgetItem-list-textbox::selection {
+    background: #DEF6FF;
+    color: #0074ae;
+  }
+  .budgetItem-list-textbox::-moz-selection {
+    background: #DEF6FF;
+    color: #0091D9;
+  }
+  
+  .budgetItem-list-textbox:hover {
+    background: rgba(93%,93%,93%,.7);
+  }
+  
+  .budgetItem-list-number {
+    flex-basis: 25%;
+    padding-top: 16px;
+  }
+  
+  .delete-icon {
+    align-self: center;
+    margin: 0 10px 0 0;
+    color: #0074ae;
+  }
+  

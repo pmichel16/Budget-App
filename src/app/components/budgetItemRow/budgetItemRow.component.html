@@ -1,0 +1,19 @@
+<div class="budgetItem-list-row container">
+  <button (click)="deleteRow()">
+    <mat-icon class="delete-icon" 
+      [style.visibility]="deleteVisible">
+      delete_outline
+    </mat-icon>
+  </button>
+  <div class="form-group budgetItem-list-form-group">
+    <input  type="text" 
+      class="form-control budgetItem-list-textbox" 
+      [attr.value]="title"
+      onclick="this.select()"
+      (select) = "inputSelected()"
+      (focusout) = "inputDeselected()">
+  </div>
+  <div class="budgetItem-list-number">$500</div>
+  <div class="budgetItem-list-number">$200</div>
+</div>
+<div class="budgetItem-list-underline"></div>

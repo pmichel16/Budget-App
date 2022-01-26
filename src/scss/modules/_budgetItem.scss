@@ -1,0 +1,60 @@
+/* 
+ * Header 
+ */
+
+.budgetItem-header {
+  display: flex;
+  width:100%;
+}
+
+.budgetItem-header-button {
+  flex-basis: 50%;
+  text-align: left;
+}
+
+.budgetItem-header-text {
+  flex-basis: 25%;
+  font-weight: bold;
+  color: darkgray;
+}
+
+/* 
+ * Table body
+ */
+ 
+.budgetItem-body {
+  background-color: white;
+  margin: 15px 0px;
+  padding: 10px 5px;
+  box-shadow: -1px -1px 3px rgba(0,0,0,0.1);
+}
+
+.budgetItem-table {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 
+ * Table items
+ */
+ 
+.budgetItem-list-container {
+  margin: 0 20px;
+}
+
+/*
+ * Add item button
+ */ 
+#add-item-btn {
+  background-color: white;
+  border: none;
+  line-height: $table-line-height;
+  padding-left: 12px;
+  font-size: medium;
+  color: #0091D9;
+  font-weight: 600;
+}
