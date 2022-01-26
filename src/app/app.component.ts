@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SAVINGS_CATEGORIES } from './mock-categories';
-import { BudgetRow, SavingsCategory } from './services/manage-budget-rows.service';
+import { BudgetRow, SavingsCategory } from './services/ManageBudgetRows/manage-budget-rows.service';
 
 @Component({
   selector: 'app-root',

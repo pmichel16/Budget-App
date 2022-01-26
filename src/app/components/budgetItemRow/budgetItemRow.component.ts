@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { ManageBudgetRowsService } from 'src/app/services/manage-budget-rows.service';
+import { BudgetRow, ManageBudgetRowsService } from 'src/app/services/ManageBudgetRows/manage-budget-rows.service';
 
 @Component({
   selector: 'app-budgetItemRow',
@@ -10,6 +10,7 @@ export class BudgetItemRowComponent implements OnInit {
   deleteVisible: string = "hidden";
 
   @Input() title: string = "";
+  @Input() id: number = 0;
   @Input() manageBudgetRowsService: ManageBudgetRowsService = new ManageBudgetRowsService();
 
   constructor() { }
@@ -25,7 +26,7 @@ export class BudgetItemRowComponent implements OnInit {
     this.deleteVisible = "hidden";
   }
 
-  deleteRow(rowId: number): void {
-    this.manageBudgetRowsService.removeItem(rowId);
+  deleteRow(): void {
+    this.manageBudgetRowsService.removeItem(this.id);
   }
 }

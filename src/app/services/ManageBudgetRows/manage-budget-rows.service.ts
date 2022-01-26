@@ -26,26 +26,33 @@ export class BudgetRow {
 @Injectable()
 export class ManageBudgetRowsService {
   
-  private test: Subject<BudgetRow[]> = new Subject<BudgetRow[]>();
+  private rowsSubject: Subject<BudgetRow[]> = new Subject<BudgetRow[]>();
   private rows: BudgetRow[] = [];
+  private newItemIndex: number = 0;
   
   getRows(): Subject<BudgetRow[]> {
-    return this.test;
+    return this.rowsSubject;
   }
 
   setInitial(rows: BudgetRow[]) {
     this.rows = rows;
-    this.test.next(rows);
+    this.rowsSubject.next(rows);
+    this.newItemIndex = this.rows.length;
+  }
+
+  getNewIndex(){
+    return this.newItemIndex;
   }
 
   addItem(row: BudgetRow) {
     this.rows.push(row);
-    this.test.next(this.rows);
+    this.rowsSubject.next(this.rows);
+    this.newItemIndex++;
   }
 
   removeItem(rowId: number) {
     //Still need to add binding to this.categories
     this.rows = this.rows.filter(row => row.id != rowId);
-    this.test.next(this.rows);
+    this.rowsSubject.next(this.rows);
   }
 }

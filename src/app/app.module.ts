@@ -8,7 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BudgetItemComponent } from './components/budgetItem/budgetItem.component';
 import { BudgetItemRowComponent } from './components/budgetItemRow/budgetItemRow.component';
 
-import {ManageBudgetRowsService} from './services/manage-budget-rows.service';
+import {ManageBudgetRowsService} from './services/ManageBudgetRows/manage-budget-rows.service';
 
 @NgModule({
   declarations: [

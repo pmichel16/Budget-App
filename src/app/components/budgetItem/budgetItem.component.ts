@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BudgetRow} from '../../services/manage-budget-rows.service';
-import { ManageBudgetRowsService } from 'src/app/services/manage-budget-rows.service';
+import { BudgetRow} from '../../services/ManageBudgetRows/manage-budget-rows.service';
+import { ManageBudgetRowsService } from 'src/app/services/ManageBudgetRows/manage-budget-rows.service';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -32,7 +32,8 @@ export class BudgetItemComponent implements OnInit {
   }
 
   addItem(): void {
-    var newItem = new BudgetRow(this.budgetRows.length + 1, "whatever");
+    let index = this.manageBudgetRowsService.getNewIndex();
+    var newItem = new BudgetRow(index, "Label");
     this.manageBudgetRowsService.addItem(newItem);
   }
 

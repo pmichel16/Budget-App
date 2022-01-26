@@ -1,4 +1,4 @@
-import {BudgetRow, SavingsCategory} from './services/manage-budget-rows.service';
+import {BudgetRow, SavingsCategory} from './services/ManageBudgetRows/manage-budget-rows.service';
 
 export const SAVINGS_CATEGORIES: SavingsCategory[] = [
     new SavingsCategory(1,"Savings",
