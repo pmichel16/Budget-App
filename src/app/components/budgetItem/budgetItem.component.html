@@ -15,8 +15,8 @@
     </div>
     <div [attr.id]="'text_'+id"class="collapse show budgetItem-list-container">
       <ul>
-        <li *ngFor="let row of budgetRows">
-          <app-budgetItemRow [title]="row.label" [manageBudgetRowsService]="manageBudgetRowsService"></app-budgetItemRow>
+        <li *ngFor="let row of budgetRows; let i = index;">
+          <app-budgetItemRow [title]="row.label" [id]="i" [manageBudgetRowsService]="manageBudgetRowsService"></app-budgetItemRow>
         </li> 
       </ul>
       <button id=add-item-btn (click) = "addItem()">Add item</button>

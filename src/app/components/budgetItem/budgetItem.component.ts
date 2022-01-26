@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BudgetRow} from '../../services/manage-budget-rows.service';
-import { ManageBudgetRowsService } from 'src/app/services/manage-budget-rows.service';
+import { BudgetRow} from '../../services/ManageBudgetRows/manage-budget-rows.service';
+import { ManageBudgetRowsService } from 'src/app/services/ManageBudgetRows/manage-budget-rows.service';
 import { Subject } from 'rxjs';
 
 @Component({
