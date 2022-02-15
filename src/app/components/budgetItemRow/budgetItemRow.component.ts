@@ -30,3 +30,4 @@ export class BudgetItemRowComponent implements OnInit {
     this.manageBudgetRowsService.removeItem(this.id);
   }
 }
+                                                                       
