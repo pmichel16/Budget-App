@@ -9,13 +9,15 @@ import { BudgetItemComponent } from './components/budgetItem/budgetItem.componen
 import { BudgetItemRowComponent } from './components/budgetItemRow/budgetItemRow.component';
 
 import {ManageBudgetRowsService} from './services/ManageBudgetRows/manage-budget-rows.service';
+import { DollarEntryComponent } from './components/dollar-entry/dollar-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BudgetItemComponent,
-    BudgetItemRowComponent
+    BudgetItemRowComponent,
+    DollarEntryComponent
   ],
   imports: [
     BrowserModule,
