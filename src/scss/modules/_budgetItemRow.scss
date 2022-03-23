@@ -31,6 +31,10 @@
     height: 1.8em;
     font-size: large;
   }
+
+  .budgetItem-dollar-entry {
+    text-align: end;
+  }
   
   .budgetItem-list-textbox::selection {
     background: #DEF6FF;
