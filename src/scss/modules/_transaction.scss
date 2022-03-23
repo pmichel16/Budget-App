@@ -1,0 +1,21 @@
+#transaction-background{
+    display: block;
+    height: 36px;
+}
+
+#transaction-button{
+    position: absolute;
+    right: 18px;
+    height: 36px;
+    text-align: center;
+    background: $budget-blue;
+    line-height: initial;
+    color: white;
+    padding:0.35em 0.5em 0 0.5em;
+}
+
+#transaction-icon{
+    vertical-align: top;
+    font-size: 1.25em;
+    
+}

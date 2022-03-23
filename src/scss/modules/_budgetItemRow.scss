@@ -1,3 +1,6 @@
+$budget-blue: #0074ae;
+
+
 /*
  * Row layout
  */
@@ -18,7 +21,7 @@
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #0074ae;
+    background-color: $budget-blue;
   }
   
   /*
@@ -38,7 +41,7 @@
   
   .budgetItem-list-textbox::selection {
     background: #DEF6FF;
-    color: #0074ae;
+    color: $budget-blue;
   }
   .budgetItem-list-textbox::-moz-selection {
     background: #DEF6FF;
@@ -54,15 +57,10 @@
     padding-top: 16px;
     border: none;
   }
-  
-  .delete-button {
-    border: none;
-    background-color: transparent;
-  }
 
   .delete-icon {
     align-self: center;
     margin: 0 10px 0 0;
-    color: #0074ae;
+    color: $budget-blue;
   }
   

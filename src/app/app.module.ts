@@ -10,6 +10,7 @@ import { BudgetItemRowComponent } from './components/budgetItemRow/budgetItemRow
 
 import {ManageBudgetRowsService} from './services/ManageBudgetRows/manage-budget-rows.service';
 import { DollarEntryComponent } from './components/dollar-entry/dollar-entry.component';
+import { TransactionHeaderComponent } from './components/transaction-header/transaction-header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DollarEntryComponent } from './components/dollar-entry/dollar-entry.com
     HeaderComponent,
     BudgetItemComponent,
     BudgetItemRowComponent,
-    DollarEntryComponent
+    DollarEntryComponent,
+    TransactionHeaderComponent
   ],
   imports: [
     BrowserModule,

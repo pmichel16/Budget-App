@@ -11,6 +11,7 @@
   ],
   "include": [
     "src/**/*.d.ts",
-    "src/app/budgetItemRow/budgetItemRow.component.ts"
+    "src/app/budgetItemRow/budgetItemRow.component.ts",
+    "src/app/components/dollar-entry/dollar-entry.component.ts"
   ]
 }
